@@ -90,3 +90,26 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
 
 For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## running
+ npm install 
+ npm start 
+## the project meets all the Rubric criteria 
+
+ ## components
+ app parent  component
+ Search child of app 
+ BookList child app
+ Reading   child of BookList
+ WantToRead child of BookList
+ Read  child of BookList
+
+## steps of solution 
+1. the data get called from the server using getAll being called in App.js as a parent component.
+2. the parent component does the data mapping based on the shelf property using filter. 
+3. the data state is filtered to three states of the three shelves each is rendered to a different shelf component ( Reading ,WantToRead, Read).
+4. Search component using debounce/throttle to keep the input state for a while then use the function search with the input value to get the search results.
+5. The search results are saved as as state and then compared with the three shelf states to detect if any of the results should have a search value.
+6. results which belongs already to one of shelf adds a shelf property with the shelve value ,others take shelve value of none.
+7. When a search result item is selected to have a certain shelve value this value is added as a shelf property to the item then send to the app as a prop through a function that adds this item to the propitiate shelf state based on the chosen shelf value.
+8. The booklist and search pages are linked using react router 
